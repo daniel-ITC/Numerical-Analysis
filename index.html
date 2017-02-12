@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Analisi Numerica</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <br>
+                <h1>Integrazione numerica</h1>
+                <br>
+
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="InputMathFunction"
+                               class="col-sm-2 control-label">Funzione:</label>
+                        <div class="col-sm-10">
+                            <input type="text"
+                                   class="form-control"
+                                   id="InputMathFunction"
+                                   name="MathFunction"
+                                   value="x^2"
+                                   placeholder="Inserisci la funzione">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="InputDivisions"
+                               class="col-sm-2 control-label">Divisioni:</label>
+                        <div class="col-sm-10">
+                            <input type="text"
+                                   class="form-control"
+                                   id="InputDivisions"
+                                   name="DivisionsNumber"
+                                   value="8"
+                                   placeholder="Inserisci il numero di divisioni">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="InputIntervalBegin"
+                               class="col-sm-2 control-label">Inizio dell'intervallo:</label>
+                        <div class="col-sm-10">
+                            <input type="text"
+                                   class="form-control"
+                                   id="InputIntervalBegin"
+                                   name="IntervalBegin"
+                                   value="2"
+                                   placeholder="Inserisci l'inizio dell'interallo">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="InputIntervalEnd"
+                               class="col-sm-2 control-label">Fine dell'intervallo:</label>
+                        <div class="col-sm-10">
+                            <input type="text"
+                                   class="form-control"
+                                   id="InputIntervalEnd"
+                                   name="IntervalEnd"
+                                   value="4"
+                                   placeholder="Inserisci la fine dell'interallo">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-primary pull-right" onclick="GetValues()">Calcola</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="Integral row">
+                    <div class="form-group">
+                        <img id="ImgIntegral" class="col-sm-2 control-label" src="img/Integral.svg" alt="Integral.svg">
+                        <div class="col-sm-10">
+                            <p id="IntegralTop" class="text-left">x</p>
+                            <p id="IntegralFunction" class="text-left">x</p>
+                            <p id="IntegralDown" class="text-left">x</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <tr>
+                            <th id="H">Altezza (h)</th>
+                            <th id="AR1">A<sub>R1</sub></th>
+                            <th id="AR2">A<sub>R2</sub></th>
+                        </tr>
+                        <tr id="Results" class="text-left"></tr>
+                    </table>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <tr id="XAxis"></tr>
+                        <tr id="XAxisValues"></tr>
+                        <tr id="FunctionValues"></tr>
+                        <tr id="Function"></tr>
+                    </table>
+                </div>
+
+                <canvas id="FunctionChart" class="center-block"></canvas>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
